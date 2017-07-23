@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="documentissuer-web:war">
+    <output-path>$PROJECT_DIR$/documentissuer-web/target</output-path>
+    <root id="archive" name="documentissuer-web.war">
+      <element id="artifact" artifact-name="documentissuer-web:war exploded" />
+    </root>
+  </artifact>
+</component>

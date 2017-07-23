@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая-то страница</title>
+</head>
+    <body>
+        <form name="test" method="post" action="./sendDocument" onsubmit="this.source.value=this.outerHTML">
+            <b>написано неразборчиво</b>
+
+            <p><b>ФИО Представителя заказчика:</b><br>
+                <input type="text" size="40" placeholder="Иванов Иван Иванович">
+            </p>
+            <p><b>ФИО Представителя исполнителя:</b><br>
+                <input type="text" size="40" placeholder="Петров Петр Петрович">
+            </p>
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить"></p>
+        </form>
+    </body>
+</html>

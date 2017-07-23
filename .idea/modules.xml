@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/documentissuer.iml" filepath="$PROJECT_DIR$/documentissuer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/documentissuer-web/documentissuer-web.iml" filepath="$PROJECT_DIR$/documentissuer-web/documentissuer-web.iml" />
+    </modules>
+  </component>
+</project>
