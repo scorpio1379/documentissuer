@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 /**
  * Created by Scorpio on 23.07.2017.
@@ -57,7 +59,10 @@ public class HttpServlet extends javax.servlet.http.HttpServlet {
 
             BigInteger nonce = ethGetTransactionCount.getTransactionCount();
             BigInteger value = Convert.toWei("0.5", Convert.Unit.ETHER).toBigInteger();
-            String data = asciiToHex(XML_TEXT);
+            /* Это кодирование в BASE64*/
+            String encoded = Base64.getEncoder().encodeToString(XML_TEXT.getBytes(StandardCharsets.UTF_8));
+            System.out.println("BASE64 XML IS:" +encoded);
+            String data = asciiToHex(encoded);
             System.out.println("HEXED XML IS:" +data);
             RawTransaction rtx = RawTransaction.createTransaction(
                     nonce, GAS_PRICE, GAS_LIMIT, RECIVER_ETH_ADDR, value, data);
