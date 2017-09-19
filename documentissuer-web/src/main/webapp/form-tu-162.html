@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ТУ-162</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+    <style>
+        body {
+            background-color: lightgray;
+            font-weight: 600;
+        }
+
+        .table-bordered,
+        .table-bordered>tbody>tr>td,
+        .table-bordered>tbody>tr>th,
+        .table-bordered>tfoot>tr>td,
+        .table-bordered>tfoot>tr>th,
+        .table-bordered>thead>tr>td,
+        .table-bordered>thead>tr>th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <form action="sendDocument" id="formtu162" method="post">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-right">Приложение №6 к Регламенту (Приложение №4)</p>
+                <p class="text-right">Форма ТУ-162</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>
+                    <div class="form-inline text-center">
+                        <div class="form-group">
+                            <label for="inputAct">АКТ №</label>
+                            <input name="inputAct" type="text" class="form-control" id="inputAct" placeholder=""> </div>
+                    </div>
+                    <p class="text-center">передачи локомотива ремонтному предприятию (сервисной компании)</p>
+                </h4> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>
+                <p>Настоящий акт составлен о том, что локомотив</p>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Серия</th>
+                        <th class="text-center">Заводской номер</th>
+                        <th class="text-center">Индекс секции</th>
+                        <th class="text-center">Депо (предприятие) приписки</th>
+                        <th class="text-center">Необходимость проведения работ</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input name="t1s1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1z1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1i1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1d1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1n1" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="t1s2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1z2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1i2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1d2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1n2" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="t1s3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1z3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1i3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1d3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1n3" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="t1s4" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1z4" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1i4" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1d4" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t1n4" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>передается ремонтному предприятию (сервисной компании)
+                    <input name="inputSvcOrg" type="text" class="form-control" value=""> для проведения
+                    <input name="inputSvcType" type="text" class="form-control" value=""> </p>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="inputColdHot">в</label>
+                        <select name="inputColdHot" id="inputColdHot" class="form-control match-content">
+                            <option value="0" selected>холодном</option>
+                            <option value="1">горячем</option>
+                        </select> <span>состоянии.</span> </div>
+                </div>
+                <hr>
+                <p>При сдаче и приемке локомотива установленно следующее:</p>
+                <p>Показатели счетчиков электроэнергии и наличия дизельного топлива в баках</p>
+                <table class="table table-bordered">
+                    <col>
+                    <colgroup span="4"></colgroup>
+                    <tr>
+                        <th rowspan="2" class="text-center">Наименование</th>
+                        <th colspan="4" scope="colgroup" class="text-center">Заводской номер/Индекс секции</th>
+                    </tr>
+                    <tr>
+                        <td scope="col">
+                            <input name="t2r1c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td scope="col">
+                            <input name="t2r1c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td scope="col">
+                            <input name="t2r1c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td scope="col">
+                            <input name="t2r1c4" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Показания счетчиков электроэнергии, кВт*ч</th>
+                        <td>
+                            <input name="t2r2c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r2c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r2c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r2c4" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Количество дизельного топлива, л</th>
+                        <td>
+                            <input name="t2r3c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r3c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r3c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r3c4" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Плотность дизельного топлива, г/см<sup><small>3</small></sup></th>
+                        <td>
+                            <input name="t2r4c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r4c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r4c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r4c4" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Количество дизельного топлива, кг</th>
+                        <td>
+                            <input name="t2r5c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r5c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r5c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t2r5c4" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                </table>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="inputTotalFuel">Итого количество топлива на локомотиве, кг</label>
+                        <input name="inputTotalFuel" type="text" class="form-control" id="inputTotalFuel" placeholder=""> </div>
+                </div>
+                <br>
+                <p>Недостающие инвентарь, детали и узлы:</p>
+                <table class="table table-bordered">
+                    <col>
+                    <colgroup span="2"></colgroup>
+                    <tr>
+                        <th rowspan="2" class="text-center">№ п/п</th>
+                        <th rowspan="2" class="text-center">Наименование инвентаря</th>
+                        <th rowspan="2" class="text-center">Ед. изм.</th>
+                        <th colspan="2" scope="colgroup" class="text-center">Количество</th>
+                    </tr>
+                    <tr>
+                        <th class="text-center">Норма</th>
+                        <th class="text-center">Факт</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="t3r1c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r1c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r1c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r1c4" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r1c5" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="t3r2c1" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r2c2" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r2c3" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r2c4" type="text" class="form-control" size="16" value=""> </td>
+                        <td>
+                            <input name="t3r2c5" type="text" class="form-control" size="16" value=""> </td>
+                    </tr>
+                </table>
+                <br>
+                <p>Дата постановки локомотива для проведения ремонта (сервисного обслуживания, технического обслуживания, модернизации) по графику.</p>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label for="inputDateSvc">Дата:</label>
+                                <input name="inputDateSvc" type="date" class="form-control" id="inputDateSvc" placeholder="Дата"> </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label for="inputTimeSvc">Время:</label>
+                                <input name="inputTimeSvc" type="time" class="form-control" id="inputTimeSvc" placeholder="Время"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>Приемка локомотива для проведения ремонта (сервисного обслуживания, технического обслуживания, МЛП, модернизации) осуществлена.</p>
+        <div class="row">
+            <div class="col-xs-3"> Представитель балансодержателя локомотива </div>
+            <div class="col-xs-5">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="inputSign1">ФИО:</label>
+                        <input name="inputSign1" type="text" class="form-control" id="inputSign1" placeholder=""> </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="inputDateSign1">Дата:</label>
+                        <input name="inputDateSign1" type="date" class="form-control" id="inputDateSign1" placeholder="Дата">
+                        <label for="inputTimeSign1">Время:</label>
+                        <input name="inputTimeSign1" type="time" class="form-control" id="inputTimeSign1" placeholder="Время"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"> Представитель ремонтного предприятия (сервисной компании) </div>
+            <div class="col-xs-5">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="inputSign2">ФИО:</label>
+                        <input name="inputSign2" type="text" class="form-control" id="inputSign2" placeholder=""> </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="inputDateSign2">Дата:</label>
+                        <input name="inputDateSign2" type="date" class="form-control" id="inputDateSign2" placeholder="Дата">
+                        <label for="inputTimeSign2">Время:</label>
+                        <input name="inputTimeSign2" type="time" class="form-control" id="inputTimeSign2" placeholder="Время"> </div>
+                </div>
+
+            </div>
+            <hr><br>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="well text-center">Copyright © 2017 Витте Консалтинг - Все права сохранены</div>
+                <br>
+            </div>
+        </div>
+
+    </form>
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <input name="button" type="submit" form="formtu162">
+        </div>
+    </div>
+</div>
+<script>
+    $( '#formtu162' ).submit(function( event ) {
+        event.preventDefault();
+        sendForm();
+    });
+</script>
+</body>
